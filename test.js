@@ -7,16 +7,16 @@ $().ready(function (){
 
 //Views
 var highestNumber = bug.data([234]);
-var template = '<div> {{ 0 }} </div>';
+var template = '<h1> {{ 0 }} </h1>';
 var highest = new bug.view(template, highestNumber);
 
-
+var clickTemplate = '<div> {{ 0 }} </div>';
 var click1Number = bug.data([5]);
-var click1 = new bug.view(template, click1Number);
+var click1 = new bug.view(clickTemplate, click1Number);
 
 
 var click2Number = bug.data([3]);
-var click2 = new bug.view(template, click2Number);
+var click2 = new bug.view(clickTemplate, click2Number);
 
 
 //Controller

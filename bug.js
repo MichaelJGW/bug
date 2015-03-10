@@ -39,12 +39,12 @@ bug.controller = function (views){
 		console.log('event :',eventType);
 		console.log('obj:',obj);
 		for (var i = 0; i < this.events.length; i++) {
-			if(this.events[i]
+			
 		};
 	}
 	obj.events = [];
 	obj.on = function(cb, eventType){
-		
+
 	};
 	//adding listeners to the views
 	for (var i = 0; i < views.length; i++) {
