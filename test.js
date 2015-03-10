@@ -1,28 +1,33 @@
 $().ready(function (){
-	highest.render();
-	click1.render();
-	click2.render();
+	bug.render();
 })
 
 
 //Views
+
+//higher View
 var highestNumber = bug.data([234]);
 var template = '<h1> {{ 0 }} </h1>';
 var highest = new bug.view(template, highestNumber);
 
+
+//click templates
 var clickTemplate = '<div> {{ 0 }} </div>';
+
+//click1
 var click1Number = bug.data([5]);
 var click1 = new bug.view(clickTemplate, click1Number);
 
+//click2
+//var click2Number = bug.data([3]);
+var click2 = new bug.view(clickTemplate, click1Number);
 
-var click2Number = bug.data([3]);
-var click2 = new bug.view(clickTemplate, click2Number);
 
 
 //Controller
 var watchHighest = new bug.controller([highest, click1, click2]);
-watchHighest.on(function(views){
-	console.log(click1)
+watchHighest.on(function(target,data){
+	data[0]++;
 },'click');
 
 
